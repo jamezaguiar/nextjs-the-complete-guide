@@ -4,9 +4,15 @@ export default function CommunityPage() {
   return (
     <main>
       <h1>Community Page</h1>
-      <Link href="/meals">Meals</Link>
-      <Link href="/meals/share">Share</Link>
-      <Link href="/meals/scrambled-eggs">Meal Details: Scrambled Eggs</Link>
+      <p>
+        <Link href="/meals">Meals</Link>
+      </p>
+      <p>
+        <Link href="/meals/share">Share</Link>
+      </p>
+      <p>
+        <Link href="/meals/scrambled-eggs">Meal Details: Scrambled Eggs</Link>
+      </p>
     </main>
   );
 }

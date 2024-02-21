@@ -7,9 +7,15 @@ export default function MealsDetailPage({ params }) {
     <main>
       <h1>Meals Detail Page</h1>
       <p>{slug}</p>
-      <Link href="/meals">Meals</Link>
-      <Link href="/meals/share">Share</Link>
-      <Link href="/community">Community</Link>
+      <p>
+        <Link href="/meals">Meals</Link>
+      </p>
+      <p>
+        <Link href="/meals/share">Share</Link>
+      </p>
+      <p>
+        <Link href="/community">Community</Link>
+      </p>
     </main>
   );
 }

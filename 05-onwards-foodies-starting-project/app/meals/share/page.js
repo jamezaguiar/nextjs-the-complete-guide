@@ -4,9 +4,15 @@ export default function MealsSharePage() {
   return (
     <main>
       <h1>Meals Share Page</h1>
-      <Link href="/meals">Meals</Link>
-      <Link href="/community">Community</Link>
-      <Link href="/meals/scrambled-eggs">Meal Details: Scrambled Eggs</Link>
+      <p>
+        <Link href="/meals">Meals</Link>
+      </p>
+      <p>
+        <Link href="/community">Community</Link>
+      </p>
+      <p>
+        <Link href="/meals/scrambled-eggs">Meal Details: Scrambled Eggs</Link>
+      </p>
     </main>
   );
 }

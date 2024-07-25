@@ -15,7 +15,7 @@ function isInvalidImage(image) {
   return !image || image === null || image === undefined || image.size === 0;
 }
 
-export async function handleShareMeal(formData) {
+export async function handleShareMeal(prevState, formData) {
   const meal = {
     title: formData.get("title"),
     summary: formData.get("summary"),
@@ -34,7 +34,9 @@ export async function handleShareMeal(formData) {
     isInvalidEmail(meal.creator_email) ||
     isInvalidImage(meal.image)
   ) {
-    throw new Error("Invalid data for meal creation");
+    return {
+      message: "Invalid input.",
+    };
   }
 
   await saveMeal(meal);

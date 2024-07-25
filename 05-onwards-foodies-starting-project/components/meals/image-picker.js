@@ -49,6 +49,7 @@ export default function ImagePicker({ label, name }) {
           accept="image/png, image/jpeg"
           name={name}
           onChange={onImagePicked}
+          required
         />
         <button
           className={styles.button}

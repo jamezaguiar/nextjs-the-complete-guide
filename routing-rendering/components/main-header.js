@@ -4,8 +4,12 @@ export default function MainHeader() {
   return (
     <header id="main-header">
       <ul>
-        <Link href="/">Home</Link>
-        <Link href="/news">News</Link>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
+          <Link href="/news">News</Link>
+        </li>
       </ul>
     </header>
   );

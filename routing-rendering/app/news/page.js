@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NewsPage() {
   return (
-    <div>
+    <>
       <h1>News Page</h1>
       <ul>
         <li>
@@ -15,6 +15,6 @@ export default function NewsPage() {
           <Link href="/news/3">Third News Item</Link>
         </li>
       </ul>
-    </div>
+    </>
   );
 }

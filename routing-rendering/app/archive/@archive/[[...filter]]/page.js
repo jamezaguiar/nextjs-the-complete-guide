@@ -11,17 +11,31 @@ export default function FilteredNewsPage({ params }) {
   const { filter } = params;
   const [selectedYear, selectedMonth] = filter || [];
 
+  const availableYears = getAvailableNewsYears();
+  const availableMonths = selectedYear
+    ? getAvailableNewsMonths(selectedYear)
+    : [];
+
+  const isYearInvalid =
+    selectedYear && !availableYears.includes(Number(selectedYear));
+  const isMonthInvalid =
+    selectedMonth && !availableMonths.includes(Number(selectedMonth));
+
   let news = [];
-  let links = getAvailableNewsYears();
+  let links = availableYears;
 
   if (selectedYear && !selectedMonth) {
     news = getNewsForYear(selectedYear);
-    links = getAvailableNewsMonths(selectedYear);
+    links = availableMonths;
   }
 
   if (selectedYear && selectedMonth) {
     news = getNewsForYearAndMonth(selectedYear, selectedMonth);
     links = [];
+  }
+
+  if (isYearInvalid || isMonthInvalid) {
+    throw new Error("Invalid filter.");
   }
 
   return (
